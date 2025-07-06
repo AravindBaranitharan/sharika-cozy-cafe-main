@@ -1,13 +1,7 @@
 export default defineConfig(({ mode }) => ({
-  base: "https://sharikacafe.shop/",
-  server: {
-    host: "::",
-    port: 8080,
-  },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
